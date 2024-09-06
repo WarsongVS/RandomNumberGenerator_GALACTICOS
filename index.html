@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generador de Galácticos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Generador de Galácticos</h1>
+        <label for="text">Texto personalizado:</label>
+        <input type="text" id="customText" placeholder="Galáctico o Bendecido">
+        
+        <label for="quantity">Cantidad de números:</label>
+        <input type="number" id="quantity" min="1" max="100" value="1">
+        
+        <label for="minValue">Valor mínimo:</label>
+        <input type="number" id="minValue" value="1">
+        
+        <label for="maxValue">Valor máximo:</label>
+        <input type="number" id="maxValue" value="100">
+        
+        <button onclick="generateNumbers()">Generar</button>
+        <button onclick="clearResults()">Limpiar</button>
+
+
+        <div id="results"></div>
+
+        <button onclick="exportResults('pdf')">Exportar a PDF</button>
+        <button onclick="exportResults('jpg')">Exportar a JPG</button>
+    </div>
+    <script src="script.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+
+</body>
+</html>
